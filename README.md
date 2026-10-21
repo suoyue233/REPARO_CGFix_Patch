@@ -1,2 +1,39 @@
 # REPARO_CGFix_Patch
 REPARO镜之家taptap游戏补丁，适用于1.0.2版本
+安装
+  1. 退出游戏，将本补丁 ZIP 完整解压。
+  2. 在taptap游戏界面点击“更多操作（齿轮图标）→浏览本地文件”
+     把 REPARO_CGFix_Patch 文件夹放入Windows 文件夹，
+     使该文件夹与 mirrorC.exe 位于同一级。
+  3. 打开 REPARO_CGFix_Patch，双击 Apply-CGFix.cmd。
+  4. 等待显示“补丁安装成功”，再运行原来的 mirrorC.exe。
+  也可以将 Windows 文件夹拖到 Apply-CGFix.cmd 上。
+  Windows 10/11 自带 PowerShell 即可；无需安装 Python、UE 或联网。
+  游戏所在磁盘请预留 4 GB 空间，生成和校验过程中请等待脚本完成。
+
+校验与备份
+  安装前检查原版文件和补丁数据的 SHA-256。
+  所有新文件先在临时目录生成并校验，再备份并替换原文件。
+  安装后再次检查全部目标发布文件的 SHA-256。
+  替换阶段出现可处理的错误时自动尝试还原。
+  原文件保存在 Windows/_REPARO_CGFix_Backup 中，请保留以便还原。
+
+还原
+  退出游戏后，双击 Restore-Original.cmd。
+  将恢复被替换的原文件，并移除补丁新加入的文件，存档保留。
+  需要保留完整的 _REPARO_CGFix_Backup 目录。
+  若安装意外中断，可重新运行 Restore-Original.cmd；
+  已还原后如需再安装，请先移走已还原的备份目录及残留工作目录。
+  如果安装后的文件另有修改，脚本会停止还原，避免覆盖这些修改。
+
+故障提示
+  旧版本不匹配：请使用上面列出的原包；不要强制覆盖。
+  补丁数据校验失败：请重新下载并完整解压 ZIP。
+  不要求管理员权限；请选择当前用户可写的游戏文件夹。
+  补丁安装成功证明文件与修复整包一致；完整通关及其他电脑上的
+  实际视频播放仍需实际验证。
+
+第三方工具
+  xdelta 3.2.0，官方 Windows x86-64 发布版，Apache License 2.0。
+  下载后已核对官方发布的 SHA-256；随附许可、来源记录及源码归档。
+  https://github.com/jmacd/xdelta/releases/tag/v3.2.0
