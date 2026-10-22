@@ -1,6 +1,0 @@
-{
-  "release_url": "https://github.com/jmacd/xdelta/releases/tag/v3.2.0",
-  "binary_archive_sha256": "8aca331c3d49ec4465ee8f3f7e3afb92e06d36e32fdec422c3252aaa813a7d2a",
-  "source_archive_sha256": "628cfa920fb5cf9f0c61b2c91a036b713fc08c7858fc53f1cc87e0921d74ffa1",
-  "decoder_sha256": "6e812b38484d0c764291779fadee83ffbe2eceaccb4e3a21f8a043a02654a01e"
-}
